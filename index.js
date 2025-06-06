@@ -4,17 +4,17 @@ const mysql = require('mysql2');
 const cors = require('cors');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3306;
 
 app.use(cors());
 app.use(express.json());
 
 // MySQL Connection
 const db = mysql.createConnection({
-  host: '34.131.54.73',
-  user: 'root',
-  password: 'SSaamm#2357',
-  database: 'sys'
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME
 });
 
 db.connect(err => {
