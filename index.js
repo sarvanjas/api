@@ -11,10 +11,10 @@ app.use(express.json());
 
 // MySQL Connection
 const db = mysql.createConnection({
-  host: env.DB_HOST,
-  user: env.DB_USER,
-  password: env.DB_PASS,
-  database: env.DB_DNAME
+  host: '34.131.54.73',
+  user: 'root',
+  password: 'SSaamm#2357',
+  database: 'sys'
 });
 
 db.connect(err => {
